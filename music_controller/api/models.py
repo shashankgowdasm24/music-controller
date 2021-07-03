@@ -1,8 +1,6 @@
 from django.db import models
-from django.db import models
 import string
 import random
-
 
 def generate_unique_code():
     length = 6
@@ -14,7 +12,6 @@ def generate_unique_code():
     return code
 
 # Create your models here.
-
 
 class Room(models.Model):
     code = models.CharField(max_length=8, default=generate_unique_code, unique=True)
