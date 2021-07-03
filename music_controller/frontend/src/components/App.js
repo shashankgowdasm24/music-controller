@@ -9,9 +9,9 @@ export default class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div className="center">
         <HomePage/>
-      </React.Fragment>
+      </div>
     );
   }
 }
