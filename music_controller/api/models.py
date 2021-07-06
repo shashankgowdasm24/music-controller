@@ -2,6 +2,8 @@ from django.db import models
 import string
 import random
 
+from django.db.models.base import Model
+
 def generate_unique_code():
     length = 6
 
@@ -26,5 +28,13 @@ class Article(models.Model):
     email = models.EmailField(max_length=100)
     date = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return self.title
+
+class Games(models.Model):
+    title = models.CharField(max_length=100)
+    player = models.CharField(max_length=100)
+    created_at = models.DateTimeField(auto_now_add=True)
+    
     def __str__(self):
         return self.title
